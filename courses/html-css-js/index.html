@@ -1,0 +1,139 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML, CSS and JavaScript for WordPress Builders | SkillForge Academy</title>
+<style>
+:root{--ink:#203047;--navy:#17253b;--accent:#d98d6b;--bg:#f4f6f8;--line:#e2e7ed;--muted:#65758a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 Arial,sans-serif}header{background:var(--navy);color:white;padding:26px max(5vw,20px)}header a{color:#ffd2bd}main{max-width:1050px;margin:28px auto;padding:0 18px}section,.panel{background:white;border:1px solid var(--line);border-radius:14px;padding:22px;margin:18px 0}h1{font-size:clamp(27px,4vw,40px);line-height:1.15;margin:12px 0}h2{font-size:22px;margin-top:0}.eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-size:11px;color:#ffd2bd}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}button,select{padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);cursor:pointer}button.primary{background:var(--navy);color:white}.screen{border:1px solid #cfd7e1;border-radius:12px;overflow:hidden}.screenbar{background:#e9eef4;padding:10px;font-size:12px}.canvas{padding:18px;min-height:170px;background:#fafbfd}.mockcard{border:1px dashed #9aa9ba;border-radius:10px;padding:15px;margin:8px 0;background:white}.progress{height:8px;background:#edf0f4;border-radius:20px;overflow:hidden}.progress span{display:block;height:100%;width:0;background:#39845d}.task{display:block;margin:12px 0}details{border-top:1px solid var(--line);padding:12px 0}input[type=checkbox]{margin-right:8px}@media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style></head><body>
+<header><a href='../index.html'>← All learning paths</a><div class='eyebrow'>SkillForge Academy · Learning path</div><h1>HTML, CSS and JavaScript for WordPress Builders</h1><p>Learn the web foundations that make page builders easier to troubleshoot</p><p class='muted' style='color:#c6d0dc'>Tools: VS Code + browser devtools</p></header>
+<main>
+<section><h2>What you will master</h2><ul><li>Structure pages semantically with HTML landmarks and headings.</li><li>Use CSS box model, Flexbox, Grid, spacing and responsive media queries.</li><li>Understand selectors, specificity and safe custom CSS.</li><li>Use JavaScript for simple interactions and form validation concepts.</li><li>Inspect elements and diagnose layout issues with browser DevTools.</li><li>Know when to use a page builder versus custom code.</li></ul></section>
+<section><h2>Lesson workflow: follow these steps in the real tool</h2><p class='muted'>Tick each step only after completing it. These are practical instructions, not just reading material.</p><div class='progress'><span id='bar'></span></div><p id='count' class='muted'>0 of 8 completed</p><ol id='tasks'><li><label><input type='checkbox'> Create a project folder and open it in VS Code.</label></li><li><label><input type='checkbox'> Create index.html, style.css and script.js for a small landing page.</label></li><li><label><input type='checkbox'> Use header, nav, main, section, article and footer elements appropriately.</label></li><li><label><input type='checkbox'> Build a two-column hero with CSS Flexbox; stack it on narrow screens.</label></li><li><label><input type='checkbox'> Use CSS Grid for a responsive three-card course listing.</label></li><li><label><input type='checkbox'> Add a button interaction with JavaScript and test it in the browser.</label></li><li><label><input type='checkbox'> Open DevTools, inspect the element and test a CSS change live.</label></li><li><label><input type='checkbox'> Validate keyboard navigation and check for console errors.</label></li></ol><button class='primary' onclick='resetTasks()'>Reset checklist</button></section>
+
+<section class="simulator-slide">
+<h2>Hands-on simulation: VS Code + browser preview</h2>
+<p>Practice a small front-end workflow: inspect files, add semantic structure, apply responsive CSS, test a JavaScript interaction and inspect the browser result.</p>
+<div class="simulator-shell">
+ <div class="sim-instructions">
+  <div class="sim-kicker">GUIDED PRACTICE · FOLLOW IN ORDER</div>
+  <h3>Your practice tasks</h3>
+  <p class="sim-instruction-lead">Complete each instruction in the simulated software screen. The next task unlocks after the correct action.</p>
+  <ol class="sim-task-list"><li class="sim-task" data-task="html"><span class="sim-check">○</span><div><b>Open index.html</b><small>Click index.html in the Explorer.</small></div></li><li class="sim-task" data-task="semantic"><span class="sim-check">○</span><div><b>Add semantic structure</b><small>Click Insert semantic layout.</small></div></li><li class="sim-task" data-task="css"><span class="sim-check">○</span><div><b>Open style.css</b><small>Select style.css in the Explorer.</small></div></li><li class="sim-task" data-task="responsive"><span class="sim-check">○</span><div><b>Apply responsive CSS</b><small>Click Add mobile media query.</small></div></li><li class="sim-task" data-task="js"><span class="sim-check">○</span><div><b>Open script.js</b><small>Select script.js in the Explorer.</small></div></li><li class="sim-task" data-task="preview"><span class="sim-check">○</span><div><b>Run browser preview</b><small>Click Run preview and test the CTA.</small></div></li></ol>
+  <div class="sim-progress"><span id="simProgress"></span></div><p id="simProgressText">0 of 6 completed</p>
+  <div class="sim-hint"><b>Practice tip</b><br>This is a simplified coding simulator. Practice the sequence, then reproduce it in VS Code and your browser.</div>
+  <button class="sim-reset" id="simReset">Reset simulation</button>
+ </div>
+ <div class="sim-app">
+  <div class="sim-appbar"><span class="sim-app-dots">● ● ●</span><b>VS Code + browser preview</b><span class="sim-app-label">TRAINING MODE</span></div>
+  <div class="sim-app-body">
+   <aside class="sim-sidebar"><button class="sim-nav" data-nav="Explorer">Explorer</button><button class="sim-nav" data-nav="Search">Search</button><button class="sim-nav" data-nav="Source Control">Source Control</button></aside>
+   <div class="sim-workspace">
+    <div class="sim-workspace-head"><b>Editor and live preview</b><span id="simStepLabel">Step 1</span></div>
+    <div class="sim-canvas">
+     <div class="sim-artboard" id="simArtboard">
+      <div class="sim-art-title" id="simArtTitle">Open the HTML file from the Explorer.</div>
+      <div class="sim-art-sub" id="simArtSub">Choose the highlighted action to continue.</div>
+      <div class="sim-demo-object" id="simObject">Sample project workspace</div>
+     </div>
+     <div class="sim-action-panel"><b>Available controls</b><div class="sim-action-grid"><button class="sim-action" data-action="html">index.html</button><button class="sim-action" data-action="semantic">Insert semantic layout</button><button class="sim-action" data-action="css">style.css</button><button class="sim-action" data-action="responsive">Add mobile media query</button><button class="sim-action" data-action="js">script.js</button><button class="sim-action" data-action="preview">Run preview</button></div></div>
+    </div>
+    <div class="sim-feedback" id="simFeedback" aria-live="polite">Start with the first task shown in the instructions panel.</div>
+   </div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section><h2>Client scenario</h2><p>The Elementor page looks broken at 390px wide. Use DevTools thinking: inspect width, overflow, fixed dimensions, image sizing and parent layout.</p><textarea id='answer' rows='5' style='width:100%;padding:12px;border:1px solid var(--line);border-radius:8px' placeholder='Write how you would handle this client task...'></textarea><button onclick='saveAnswer()'>Save my response on this device</button><p id='saved' class='muted'></p></section>
+<section><h2>Knowledge check</h2><details><summary>What does semantic HTML improve?</summary><p>Explain your answer in your own words, then verify it by doing the task in the tool. The lesson is complete when you can demonstrate the concept without copying instructions.</p></details><details><summary>When is CSS Grid useful?</summary><p>Explain your answer in your own words, then verify it by doing the task in the tool. The lesson is complete when you can demonstrate the concept without copying instructions.</p></details><details><summary>What can the browser console reveal?</summary><p>Explain your answer in your own words, then verify it by doing the task in the tool. The lesson is complete when you can demonstrate the concept without copying instructions.</p></details></section>
+<section><h2>Professional standard</h2><p>Before calling this skill client-ready, complete the task in the actual tool, test it at realistic screen sizes, document decisions, and explain the result in plain language. Simulations are practice aids—not proof of proficiency.</p><p><a href='https://learn.wordpress.org/' target='_blank' rel='noopener'>WordPress Learn</a> · <a href='https://elementor.com/academy/' target='_blank' rel='noopener'>Elementor Academy</a> · <a href='https://help.figma.com/' target='_blank' rel='noopener'>Figma Help Center</a> · <a href='https://developer.mozilla.org/' target='_blank' rel='noopener'>MDN Web Docs</a> · <a href='https://web.dev/learn/' target='_blank' rel='noopener'>web.dev Learn</a></p></section>
+</main><script>
+const boxes=[...document.querySelectorAll('#tasks input')];function update(){let n=boxes.filter(x=>x.checked).length;document.getElementById('bar').style.width=(n/boxes.length*100)+'%';document.getElementById('count').textContent=n+' of '+boxes.length+' completed';localStorage.setItem('sf-html-css-js',JSON.stringify(boxes.map(x=>x.checked)))}boxes.forEach(x=>x.addEventListener('change',update));try{let a=JSON.parse(localStorage.getItem('sf-html-css-js')||'[]');boxes.forEach((x,i)=>x.checked=!!a[i]);update()}catch(e){}function resetTasks(){boxes.forEach(x=>x.checked=false);update()}function doAction(){let v=document.getElementById('action').value;let tips={Plan:'Define the user, goal, page structure and success criteria before touching the tool.',Build:'Create a small first version using reusable patterns and clear naming.',Test:'Check responsive behavior, links, keyboard use, errors and real user tasks.',Handoff:'Document what is complete, what needs client input, access/licensing and next steps.'};document.getElementById('mocktext').textContent=v+' phase';document.getElementById('output').textContent=tips[v];document.getElementById('feedback').textContent='Practice prompt: '+tips[v]}function saveAnswer(){localStorage.setItem('sf-answer-html-css-js',document.getElementById('answer').value);document.getElementById('saved').textContent='Saved in this browser on this device.'}document.getElementById('answer').value=localStorage.getItem('sf-answer-html-css-js')||'';
+</script>
+<style>
+body{background:linear-gradient(135deg,#e9e4dc,#f6f4f0);overflow-x:hidden}
+.deck-top{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1240px;margin:18px auto 0;padding:0 22px;color:#5d6b7b;font-size:13px}
+.deck-progress{height:5px;background:#d9d5cf;border-radius:10px;overflow:hidden;flex:1;max-width:360px}.deck-progress span{display:block;height:100%;width:0;background:#c87958;transition:width .25s}
+.deck-layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:22px;max-width:1240px;margin:18px auto;padding:0 22px}
+.deck-outline{position:sticky;top:16px;align-self:start;background:rgba(255,255,255,.8);border:1px solid #dedbd5;border-radius:14px;padding:14px;max-height:calc(100vh - 32px);overflow:auto}
+.deck-outline strong{display:block;font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#788391;margin:4px 8px 12px}
+.deck-outline button{display:block;width:100%;text-align:left;border:0;background:transparent;padding:9px 10px;margin:2px 0;border-radius:8px;color:#526174;font-size:13px;cursor:pointer}
+.deck-outline button.active{background:#203047;color:white}.deck-outline button.visited:before{content:"✓ ";color:#d99a7e}
+.deck-stage{min-width:0}.deck-slide{display:none;background:white;border:1px solid #e4e0d9;border-radius:18px;box-shadow:0 16px 45px rgba(36,43,54,.09);padding:clamp(22px,4vw,48px);min-height:min(690px,calc(100vh - 185px));animation:slidein .22s ease}
+.deck-slide.active{display:block}.deck-slide>h2:first-child{font-size:clamp(24px,3vw,34px);line-height:1.2;color:#1c2b40;padding-bottom:15px;border-bottom:1px solid #ece8e2}
+.deck-slide p,.deck-slide li{font-size:16px;line-height:1.75}
+.deck-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1000px;margin:16px auto;padding:0 22px}
+.deck-controls button{min-width:112px;padding:12px 18px;border-radius:10px;cursor:pointer}
+.deck-controls .next{background:#203047;color:white;border-color:#203047}.deck-controls button:disabled{opacity:.35;cursor:not-allowed}
+.deck-counter{font-variant-numeric:tabular-nums;color:#687587;font-size:13px}.deck-hint{font-size:12px;color:#7b8794;text-align:center;margin:7px 0 28px}
+@keyframes slidein{from{opacity:.55;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(max-width:800px){.deck-layout{grid-template-columns:1fr;padding:0 12px}.deck-outline{position:static;max-height:none;display:flex;gap:5px;overflow-x:auto;white-space:nowrap;padding:8px}.deck-outline strong{display:none}.deck-outline button{width:auto;flex:0 0 auto}.deck-slide{padding:22px;min-height:60vh}.deck-top{padding:0 12px}}
+@media print{.deck-outline,.deck-top,.deck-controls,.deck-hint{display:none!important}.deck-layout{display:block;margin:0;padding:0}.deck-slide{display:block!important;box-shadow:none;border:0;page-break-after:always;min-height:0}}
+</style>
+<div class="deck-top"><span>LESSON PRESENTATION</span><div class="deck-progress"><span id="deckProgressFill"></span></div><span id="deckTopCount">Slide 1</span></div>
+<div class="deck-layout"><nav class="deck-outline" id="deckOutline" aria-label="Presentation slides"><strong>Slide navigator</strong></nav><div class="deck-stage" id="deckStage"></div></div>
+<div class="deck-controls"><button id="deckPrev">← Previous</button><span class="deck-counter" id="deckCounter">1 / 1</span><button class="next" id="deckNext">Next →</button></div>
+<div class="deck-hint">Use Previous/Next, the slide navigator, or keyboard ← → arrows. Scroll within a slide to read longer content.</div>
+<script>
+(function(){const main=document.querySelector('main');if(!main)return;const items=[...main.children].filter(x=>x.tagName==='SECTION');const stage=document.getElementById('deckStage'),nav=document.getElementById('deckOutline');let current=0;
+items.forEach((el,i)=>{el.classList.add('deck-slide');stage.appendChild(el);let h=el.querySelector('h2,h3');let b=document.createElement('button');b.textContent=String(i+1).padStart(2,'0')+'  '+(h?h.textContent.trim():'Slide '+(i+1));b.onclick=()=>show(i);nav.appendChild(b)});
+function show(i){current=Math.max(0,Math.min(items.length-1,i));items.forEach((x,n)=>x.classList.toggle('active',n===current));[...nav.querySelectorAll('button')].forEach((b,n)=>{b.classList.toggle('active',n===current);b.classList.toggle('visited',n<current)});document.getElementById('deckCounter').textContent=(current+1)+' / '+items.length;document.getElementById('deckTopCount').textContent='Slide '+(current+1)+' of '+items.length;document.getElementById('deckProgressFill').style.width=((current+1)/items.length*100)+'%';document.getElementById('deckPrev').disabled=current===0;document.getElementById('deckNext').disabled=current===items.length-1;window.scrollTo({top:0,behavior:'smooth'})}
+document.getElementById('deckPrev').onclick=()=>show(current-1);document.getElementById('deckNext').onclick=()=>show(current+1);document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName))return;if(e.key==='ArrowRight'||e.key==='PageDown')show(current+1);if(e.key==='ArrowLeft'||e.key==='PageUp')show(current-1)});show(0)})();
+</script>
+
+<style>
+.simulator-shell{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(0,1.5fr);gap:16px;margin-top:20px;align-items:stretch}
+.sim-instructions{background:#f6f4ef;border:1px solid #e3ded5;border-radius:14px;padding:18px}
+.sim-kicker{font-size:10px;letter-spacing:1.4px;color:#b36d4e;font-weight:700}
+.sim-instructions h3{margin:8px 0}.sim-instruction-lead{font-size:13px!important;color:#667487}
+.sim-task-list{list-style:none;padding:0;margin:14px 0}.sim-task{display:flex;gap:9px;padding:10px 8px;border-radius:9px;margin:4px 0;color:#7b8794}
+.sim-task.active{background:#fff;border:1px solid #d7a187;color:#203047}.sim-task.done{color:#367454}
+.sim-task b{display:block;font-size:13px}.sim-task small{display:block;font-size:11px;line-height:1.45;margin-top:3px}
+.sim-check{font-size:17px;min-width:18px}.sim-progress{height:7px;background:#e1ddd5;border-radius:10px;overflow:hidden}.sim-progress span{display:block;height:100%;width:0;background:#39845d;transition:width .2s}
+#simProgressText{font-size:11px!important;color:#718092}.sim-hint{background:#fff;border-left:3px solid #c87958;padding:10px;font-size:12px;color:#536174;border-radius:5px}
+.sim-reset{margin-top:12px;background:#203047;color:white;border:0;border-radius:8px;padding:9px 13px;cursor:pointer}
+.sim-app{border:1px solid #cbd3dc;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 26px #1d2a3a14;min-width:0}
+.sim-appbar{height:44px;background:#1f2d42;color:white;display:flex;align-items:center;gap:13px;padding:0 13px;font-size:12px}.sim-app-dots{font-size:10px;color:#d28a68;letter-spacing:2px}.sim-app-label{margin-left:auto;font-size:9px;letter-spacing:1px;color:#c7d2df}
+.sim-app-body{display:grid;grid-template-columns:145px minmax(0,1fr);min-height:430px}.sim-sidebar{background:#f2f4f7;padding:12px 8px;border-right:1px solid #e0e5eb}
+.sim-nav{display:block;width:100%;text-align:left;border:0;background:transparent;padding:9px 8px;margin:2px 0;border-radius:6px;color:#516074;font-size:11px;cursor:pointer}.sim-nav:hover,.sim-nav.selected{background:#dfe7f0;color:#1f3047}
+.sim-workspace{min-width:0}.sim-workspace-head{height:42px;padding:10px 14px;border-bottom:1px solid #e8ebef;display:flex;justify-content:space-between;font-size:12px}.sim-workspace-head span{color:#8b96a3;font-size:10px}
+.sim-canvas{padding:16px;background:#f8fafc;min-height:340px}.sim-artboard{min-height:145px;border:1px dashed #bdc8d4;border-radius:8px;background:white;padding:22px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.sim-art-title{font-size:17px;font-weight:700;color:#203047}.sim-art-sub{font-size:12px;color:#728093;margin-top:7px}.sim-demo-object{margin-top:15px;padding:9px 12px;border-radius:7px;background:#eef2f6;color:#526174;font-size:11px}
+.sim-action-panel{margin-top:14px;background:white;border:1px solid #e1e6ec;border-radius:8px;padding:12px}.sim-action-panel>b{font-size:11px}.sim-action-grid{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px}
+.sim-action{font-size:11px;border:1px solid #cfd7e0;background:#fff;border-radius:6px;padding:8px 10px;color:#33445a;cursor:pointer}.sim-action:hover{border-color:#c87958;background:#fff8f4}.sim-action:disabled{opacity:.4;cursor:not-allowed}
+.sim-action.current{border-color:#c87958;background:#fff0e8;box-shadow:0 0 0 2px #c8795820}
+.sim-feedback{padding:12px 15px;border-top:1px solid #e8ebef;background:#fffaf6;font-size:12px;color:#566477;min-height:44px}
+@media(max-width:850px){.simulator-shell{grid-template-columns:1fr}.sim-app-body{grid-template-columns:110px minmax(0,1fr)}.sim-appbar{font-size:10px}.sim-canvas{padding:10px}}
+@media(max-width:520px){.sim-app-body{grid-template-columns:1fr}.sim-sidebar{display:flex;overflow-x:auto;border-right:0;border-bottom:1px solid #e0e5eb}.sim-nav{width:auto;white-space:nowrap;flex:0 0 auto}.sim-artboard{padding:14px}}
+</style>
+
+<script>
+(function(){
+const tasks=[{"title": "Open index.html", "instruction": "Click index.html in the Explorer.", "key": "html"}, {"title": "Add semantic structure", "instruction": "Click Insert semantic layout.", "key": "semantic"}, {"title": "Open style.css", "instruction": "Select style.css in the Explorer.", "key": "css"}, {"title": "Apply responsive CSS", "instruction": "Click Add mobile media query.", "key": "responsive"}, {"title": "Open script.js", "instruction": "Select script.js in the Explorer.", "key": "js"}, {"title": "Run browser preview", "instruction": "Click Run preview and test the CTA.", "key": "preview"}];
+let completed=new Set(),step=0;
+const buttons=[...document.querySelectorAll('.sim-action')],taskEls=[...document.querySelectorAll('.sim-task')];
+const feedback=document.getElementById('simFeedback'),title=document.getElementById('simArtTitle'),sub=document.getElementById('simArtSub'),obj=document.getElementById('simObject');
+function paint(){
+ taskEls.forEach((el,i)=>{el.classList.toggle('done',completed.has(i));el.classList.toggle('active',i===step);el.querySelector('.sim-check').textContent=completed.has(i)?'✓':(i===step?'●':'○')});
+ document.getElementById('simProgress').style.width=(completed.size/tasks.length*100)+'%';
+ document.getElementById('simProgressText').textContent=completed.size+' of '+tasks.length+' completed';
+ document.getElementById('simStepLabel').textContent=step<tasks.length?'Step '+(step+1):'Practice complete';
+ buttons.forEach(b=>{b.classList.toggle('current',step<tasks.length&&b.dataset.action===tasks[step].key)});
+}
+buttons.forEach(b=>b.addEventListener('click',()=>{
+ const key=b.dataset.action;
+ if(step>=tasks.length){feedback.textContent='All tasks completed. Reset to practice again.';return}
+ if(key!==tasks[step].key){feedback.textContent='Not quite yet. Current instruction: '+tasks[step].instruction;return}
+ completed.add(step);
+ title.textContent=tasks[step].title+' ✓';
+ sub.textContent='Good work. You completed this practice action.';
+ obj.textContent='Updated: '+tasks[step].title;
+ feedback.textContent='Correct! '+tasks[step].instruction;
+ step++;
+ if(step<tasks.length){feedback.textContent+=' Next: '+tasks[step].instruction;}
+ else{title.textContent='Simulation completed!';sub.textContent='You completed every guided practice task.';feedback.textContent='Excellent! You completed all '+tasks.length+' steps. Reset the simulation to try again.';}
+ paint();
+}));
+document.querySelectorAll('.sim-nav').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.sim-nav').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');feedback.textContent='Navigation selected: '+b.textContent+'. Follow the current task instruction to continue.'}));
+document.getElementById('simReset').addEventListener('click',()=>{completed.clear();step=0;title.textContent="Open the HTML file from the Explorer.";sub.textContent='Choose the highlighted action to continue.';obj.textContent='Sample project workspace';feedback.textContent='Simulation reset. Start with the first task.';paint()});
+paint();
+})();
+</script>
+</body></html>
